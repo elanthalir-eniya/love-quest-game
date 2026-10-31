@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;1,500&display=swap');
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;user-select:none}
 html,body{margin:0;height:100%;background:#2a1b4d;overflow:hidden;font-family:"Comic Sans MS","Segoe UI",system-ui,sans-serif}
 body{display:flex;align-items:center;justify-content:center}
@@ -28,3 +29,16 @@ button:active{transform:translateY(.15em)}
 #dlg.k::after{left:-1.2em;border-right-color:#fff}#dlg.l::after{right:-1.2em;border-left-color:#fff}
 #dlg p{margin:.2em 0}#dlg small{opacity:.6}#sk{font-size:.6em;padding:.3em .7em}
 @keyframes bub{from{transform:scale(.6);opacity:0}}
+
+.full.grand{position:relative;overflow:hidden;font-family:'Playfair Display',Georgia,serif;background:radial-gradient(circle at 50% 28%,#ff9ccc66,transparent 55%),radial-gradient(circle at 15% 85%,#8ab4ff55,transparent 45%),radial-gradient(circle at 85% 80%,#ffd86b44,transparent 40%),linear-gradient(160deg,#150a35,#3d2086 50%,#a0409a)}
+.full.grand::before{content:"";position:absolute;inset:0;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(2px 2px at 90px 80px,#ffe9a8,transparent),radial-gradient(1.5px 1.5px at 150px 20px,#fff,transparent),radial-gradient(2px 2px at 60px 130px,#ffd1e8,transparent);background-size:180px 160px;animation:tw 3s infinite alternate}
+.full.grand::after{content:"";position:absolute;inset:.7em;border:.12em solid #ffd86b;border-radius:1em;box-shadow:0 0 1.2em #ffd86b88,inset 0 0 1.2em #ffd86b55;pointer-events:none}
+@keyframes tw{from{opacity:.35}to{opacity:1}}
+.grand h1,.grand h2,.grand h3,.grand .gt,.grand .gp,.grand small,.grand button{position:relative;z-index:2}
+.grand h2{font-family:'Great Vibes',cursive;font-weight:400;font-size:1.9em;margin:.1em 0;background:linear-gradient(#fff6c8,#ffd86b 60%,#e8a53c);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;filter:drop-shadow(0 .05em .15em #0008)}
+.grand h3{font-family:'Great Vibes',cursive;font-weight:400;font-size:2.2em;margin:0;color:#ffd1e8;text-shadow:0 0 .4em #ff7ab8}
+.grand .gt{font-size:.5em;letter-spacing:.35em;text-transform:uppercase;color:#ffe9a8}
+.grand .gp{font-size:.85em;font-style:italic;max-width:80%;margin:0;color:#fff;text-shadow:0 0 .5em #ffb3e0}
+.grand .ily{font-family:'Great Vibes',cursive;font-weight:400;font-size:2.6em;margin:.1em;background:linear-gradient(#fff6c8,#ffd86b 55%,#ff9ccc);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none;animation:pop 1.4s infinite alternate;filter:drop-shadow(0 0 .3em #ff7ab8)}
+.fl{position:absolute;bottom:-2em;opacity:.8;animation:up 7s linear infinite;z-index:1;font-style:normal}
+@keyframes up{to{transform:translateY(-130vh) rotate(25deg);opacity:0}}
