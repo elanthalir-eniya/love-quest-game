@@ -1,12 +1,12 @@
 const $=s=>document.querySelector(s),C=$('#c'),X=C.getContext('2d'),W=960,H=540,G=450;C.width=W;C.height=H;
-const I=n=>{const i=new Image();i.src='assets/'+n+'.png';return i};
+const I=n=>{const i=new Image();i.src=''+n+'.png';return i};
 const IM={lok:I('lokesh'),kan:I('kanmani')};
-const S={};['bgm','collect','hit','win'].forEach(n=>S[n]=new Audio('assets/'+n+'.wav'));S.bgm.loop=true;S.bgm.volume=.35;
+const S={};['bgm','collect','hit','win'].forEach(n=>S[n]=new Audio(''+n+'.wav'));S.bgm.loop=true;S.bgm.volume=.35;
 let cur=null,mute=false;
-function music(n){if(cur){cur.pause();cur=null}const a=new Audio('assets/level'+n+'.mp3');a._st=n<3?30:0;a.volume=.55;
+function music(n){if(cur){cur.pause();cur=null}const a=new Audio('level'+n+'.mp3');a._st=n<3?30:0;a.volume=.55;
  a.addEventListener('loadedmetadata',()=>{try{a.currentTime=a._st}catch(e){}});
  a.addEventListener('ended',()=>{a.currentTime=a._st;if(!mute)a.play().catch(()=>{})});
- a.onerror=()=>{if(cur===a){a._st=0;a.loop=true;a.src='assets/bgm'+n+'.wav';a.volume=.4;if(!mute)a.play().catch(()=>{})}};cur=a;if(!mute)a.play().catch(()=>{})}
+ a.onerror=()=>{if(cur===a){a._st=0;a.loop=true;a.src='bgm'+n+'.wav';a.volume=.4;if(!mute)a.play().catch(()=>{})}};cur=a;if(!mute)a.play().catch(()=>{})}
 const play=n=>{if(mute)return;try{S[n].currentTime=0;S[n].play()}catch(e){}};
 const N={1:'Level 1 · The Beginning 🌸',2:'Level 2 · The Love Challenge 💗',3:'Level 3 · Forever Together 🌙'};
 const LV={1:{emoji:'💗',goal:3000,xs:[480,950,1400,1950,2550],hi:[0,1,0,1,0],ob:[700,1180,1700,2250,2780]},
